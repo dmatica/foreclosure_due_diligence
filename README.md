@@ -4,8 +4,6 @@ This project was developed as a proof-of-concept to streamline acquisition of in
 ## Getting started
 We start off by using the `requests` [library](http://docs.python-requests.org/en/master/) to ping the website linked above, followed by [Beautiful Soup 4](https://www.crummy.com/software/BeautifulSoup/) to grab specific content of interest. 
 
-`page = requests.get('https://www.co.somerset.nj.us/government/elected-officials/sheriff-s-office/divisions/sheriff-sales')`
-
-`soup = BeautifulSoup(page.content, 'html.parser')`
-
-`content_box = soup.find('div', attrs={'class': 'content_area'})`
+>page = requests.get('https://www.co.somerset.nj.us/government/elected-officials/sheriff-s-office/divisions/sheriff-sales')  
+>soup = BeautifulSoup(page.content, 'html.parser')  
+>content_box = soup.find('div', attrs={'class': 'content_area'})  
