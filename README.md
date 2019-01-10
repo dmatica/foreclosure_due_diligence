@@ -1,6 +1,9 @@
 # Foreclosure Due Diligence
 This project was developed as a proof-of-concept to streamline acquisition of information on upcoming foreclosure auctions. For the purpose of this project, we are using Beautiful Soup to scrape property addresses from the foreclosure auction site hosted by the [Sheriff's office in Somerset county, NJ](https://www.co.somerset.nj.us/government/elected-officials/sheriff-s-office/divisions/sheriff-sales), then using HERE's API to get the postal code for the addresses, followed by using Zillow's API to get more metrics about the properties, such as home and property size, number of bedrooms and bathrooms, and previous recorded tax assessment value.
 
+## Usage
+This script was written using Python 3.7, and compiled together into several cells of a Jupyter notebook. The first cell installs any necessary dependencies and imports the libraries necesssary to run. The second cell serves as a placeholder to store the API keys.  For this script, I am using [HERE's](https://developer.here.com/) API for it's geocoding capabilities to acquire postal codes for the addresses scraped, and [Zillow's](https://www.zillow.com/howto/api/APIOverview.htm) API to get available information on the properties. Both APIs are available for free. To use Zillow's API, you are required to make a Zillow acount first, before generating a Zillow Web Services ID (ZWSID) to make API calls.  To use HERE's API, sign up for an account, and make a new project. For this project, you can use the Freemium plan, which allows up to 250,000 API calls per month.  HERE then gives you an APP ID and APP code for each specific project, both of which are needed to make API calls.
+
 ## Getting started
 We start off by using the `requests` [library](http://docs.python-requests.org/en/master/) to ping the website linked above, followed by [Beautiful Soup 4](https://www.crummy.com/software/BeautifulSoup/) to grab specific content of interest. 
 
